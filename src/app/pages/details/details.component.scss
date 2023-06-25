@@ -1,0 +1,26 @@
+.container {
+  width: 580px;
+  margin: 50px;
+  margin-bottom: 30px;
+  margin-top: 40px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+textarea {
+  border-radius: 8px;
+  border: 2px solid #efdecc;
+  background-color: #fef0e1;
+  resize: none;
+  outline: none;
+  padding: 15px;
+  color: gray;
+  margin-top: 10px;
+}
+
+.icon {
+  color: gray;
+  font-size: 20px;
+  cursor: pointer;
+}

@@ -1,0 +1,10 @@
+<div class="container">
+  <fa-icon [icon]="faArrowLeft" class="icon" routerLink="/"></fa-icon>
+  <textarea
+    [value]="myValue"
+    (change)="onChange($event)"
+    cols="85"
+    rows="38"
+    placeholder="Comece a escrever..."
+  ></textarea>
+</div>

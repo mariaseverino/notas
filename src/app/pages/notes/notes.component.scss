@@ -1,0 +1,47 @@
+.container {
+  width: 600px;
+  margin: 50px;
+}
+
+h1 {
+  margin-bottom: 25px;
+  color: #212121;
+}
+li {
+  height: 30px;
+  list-style: none;
+  background-color: #efdecc;
+  border-radius: 8px;
+  padding: 10px 10px 15px;
+  margin-bottom: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  border: 2px solid #efdecc;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 600px;
+
+  &:hover {
+    border: 2px solid #efd5b9;
+  }
+}
+.icon {
+  color: rgb(196, 60, 60);
+  margin-top: 5px;
+}
+a {
+  text-decoration: none;
+  width: 95%;
+}
+.id {
+  color: gray;
+  font-weight: bold;
+}
+
+.content {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #212121;
+}

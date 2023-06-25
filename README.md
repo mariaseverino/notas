@@ -1,27 +1,62 @@
 # Notas
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+<div align="center">
+    <p>
+        <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/mariaseverino/notas?color=2596be&logoColor=2596be&style=for-the-badge">
+        <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/mariaseverino/notas?color=2596be&logoColor=2596be&style=for-the-badge">
+    </p>
+</div>
 
-## Development server
+<p align="center">
+    <a href="#">Sobre</a> •
+    <a href="#">Tecnologias</a> •
+    <a href="#">Estrutura de diretórios</a> •
+    <a href="#">Como executar o projeto</a>
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+</p>
 
-## Code scaffolding
+## ✨ Sobre
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Aplicação de anotações, onde é possivel adicionar, editar e deletar uma anotação.
 
-## Build
+## ⚡️ Tecnologias
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Node
+- Angular
+- Json Server
 
-## Running unit tests
+## 🗃️ Estrutura de diretórios
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```
+├── src
+│   └── app
+│       ├── componentes
+│       ├── data
+│       ├── entities
+│       ├── pages
+│       ├── repositories
+│       └── services
+```
 
-## Running end-to-end tests
+## 🤔 Como executar o projeto
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### 🚨 Pré requisito
 
-## Further help
+Antes de começar, você vai precisar ter o [Node.js](https://nodejs.org/) instalado em sua máquina.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```bash
+# Clone este repositório
+$ git clone https://github.com/mariaseverino/notas.git
+
+# Acesse a pasta do projeto
+$ cd notas
+
+# Instale as dependências
+$ npm install
+
+# Execute a aplicação
+$ npm start
+
+# Execute a api
+$ json-server --watch src/app/data/db.json
+```

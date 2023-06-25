@@ -1,0 +1,20 @@
+<div class="container">
+  <h1>Anotações</h1>
+  <ul>
+    <li *ngFor="let item of notes | async">
+      <a [routerLink]="['note', 'details', item.id]">
+        <p class="id">#{{ item.id }}</p>
+        <p class="content">{{ item.content }}</p>
+      </a>
+      <fa-icon
+        [icon]="faTrash"
+        class="icon"
+        (click)="onDelete(item.id!)"
+      ></fa-icon>
+    </li>
+  </ul>
+  <app-button
+    buttonText="+ Nova anotação"
+    [routerLink]="['note', 'details']"
+  ></app-button>
+</div>
