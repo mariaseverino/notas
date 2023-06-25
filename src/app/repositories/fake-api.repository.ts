@@ -17,11 +17,11 @@ export class FakeApiRepository extends NoteRepository {
   getById(id: number): Observable<Note> {
     return this.http.get<Note>(`${api}/${id}`).pipe(take(1));
   }
-  save(note: Note) {
-    this.http.post(api, note).pipe(take(1)).subscribe();
+  save(note: Note): Observable<Object> {
+    return this.http.post(api, note).pipe(take(1));
   }
-  update(note: Note) {
-    this.http.put(`${api}/${note.id}`, note).pipe(take(1)).subscribe();
+  update(note: Note): Observable<Object> {
+    return this.http.put(`${api}/${note.id}`, note).pipe(take(1));
   }
 
   delete(id: number): Observable<Object> {

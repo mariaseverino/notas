@@ -1,3 +1,12 @@
 {
-  "notes": []
+  "notes": [
+    {
+      "id": 1,
+      "content": "O AngularJS é um framework de código aberto usado para construir aplicativos para web baseados em uma única página dinâmica. Os desenvolvedores também usam essa ferramenta para criar menus animados para páginas de internet baseadas em HTML."
+    },
+    {
+      "id": 3,
+      "content": "124567"
+    }
+  ]
 }

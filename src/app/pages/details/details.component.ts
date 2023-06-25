@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Note } from 'src/app/entities/note.entity';
 import { NotesService } from 'src/app/services/notes.service';
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons';
@@ -14,7 +14,11 @@ export class DetailsComponent implements OnInit {
   id: number | undefined;
   faArrowLeft = faArrowLeft;
 
-  constructor(private route: ActivatedRoute, private service: NotesService) {
+  constructor(
+    private route: ActivatedRoute,
+    private service: NotesService,
+    private router: Router
+  ) {
     this.id = this.route.snapshot.params['id'];
   }
 
@@ -27,11 +31,17 @@ export class DetailsComponent implements OnInit {
   }
   onChange(e: any) {
     this.myValue = e.target.value;
+  }
 
+  back() {
     if (this.id) {
-      this.service.updateNote({ id: this.id, content: this.myValue });
+      this.service
+        .updateNote({ id: this.id, content: this.myValue })
+        .subscribe(() => this.router.navigate(['/']));
     } else {
-      this.service.saveNote({ content: this.myValue });
+      this.service
+        .saveNote({ content: this.myValue })
+        .subscribe(() => this.router.navigate(['/']));
     }
   }
 }

@@ -19,12 +19,12 @@ export class NotesService {
     return this.repo.getById(id);
   }
 
-  saveNote(note: Note) {
-    this.repo.save(note);
+  saveNote(note: Note): Observable<Object> {
+    return this.repo.save(note);
   }
 
-  updateNote(note: Note) {
-    this.repo.update(note);
+  updateNote(note: Note): Observable<Object> {
+    return this.repo.update(note);
   }
 
   deleteNote(id: number): Observable<Object> {
